@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
 
   s.source =  { :path => '.' }
-  s.source   = { :git => 'https://github.com/alibaba/bindingx.git', :tag => s.version }
+  s.source   = { :git => 'https://github.com/chinabrant/bindingx.git', :tag => s.version }
   s.source_files  = "core/ios/BindingX/**/*.{h,m,mm}" , "weex/ios/Sources/*.{h,m,mm}"
   
   s.requires_arc = true
-  s.dependency "WeexPluginLoader"
+#  s.dependency "WeexPluginLoader"
   s.dependency "WeexSDK"
 end
