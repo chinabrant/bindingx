@@ -25,6 +25,10 @@ Pod::Spec.new do |s|
   s.source =  { :path => '.' }
   s.source   = { :git => 'https://github.com/alibaba/bindingx.git', :tag => s.version }
   s.source_files  = "core/ios/BindingX/**/*.{h,m,mm}" , "weex/ios/Sources/*.{h,m,mm}"
+
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '$(inherited) -undefined dynamic_lookup'
+  }
   
   s.requires_arc = true
   s.dependency "WeexPluginLoader"
