@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source_files  = "core/ios/BindingX/**/*.{h,m,mm}" , "weex/ios/Sources/*.{h,m,mm}"
 
   s.pod_target_xcconfig = {
-    'OTHER_LDFLAGS' => '$(PROJECT_DIR)/Pods/WeexPluginLoader dynamic_lookup'
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/WeexPluginLoader',
   }
   
   s.requires_arc = true
